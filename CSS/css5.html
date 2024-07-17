@@ -3,73 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buttons</title>
+    <title>My First Styled Page</title>
     <style>
-        *{
-    box-sizing: border-box;
+        /* Reset some default browser styles */
+body, ul {
+    margin: 0;
+    padding: 0;
 }
+
 body {
-    margin-left: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d0e050; /* Light green background */
+    color: #6a006a; /* Dark magenta text color */
 }
-.button {
-    width: 150px;
+
+.container {
     display: flex;
-    flex-direction: column;
-    float: left;
 }
 
-button {
-    border: none;
-    font-size: 15px;
-    padding: 15px 30px;
-    border-radius: 10px;
+.sidebar {
+    background-color: #d0e050; /* Light green background */
+    padding: 10px;
+    width: 200px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
     margin-bottom: 10px;
-    margin-right: 10px;
-    position: relative;
-    z-index: 1;
-    transition: 0.3s;
-    left: -100px;
-}
-.about {
-    background-color: green;
-}
-.blog {
-    background-color: blue;
-}
-.project {
-    background-color: red;
-}
-.contact {
-    background-color: rgb(78, 66, 66);
-}
-.text {
-    float: left;
-    margin-left: 50px;
-    position: absolute;
 }
 
-button:hover {
-    left: -20px;
+.sidebar ul li a {
+    display: block;
+    color: #0000ee; /* Blue link color */
+    background-color: #fff;
+    padding: 5px;
+    text-decoration: none;
+    border-left: 10px solid #000; /* Black left border */
+}
+
+.sidebar ul li a:hover {
+    background-color: #ddd;
+}
+
+.content {
+    padding: 20px;
+    max-width: 600px;
+}
+
+.content h1 {
+    color: #800080; /* Purple heading color */
+    font-size: 2em;
+}
+
+.content hr {
+    border: none;
+    border-top: 1px dotted #800080; /* Dotted underline */
+    margin: 20px 0;
+}
+
+.content p {
+    margin-bottom: 1em;
+}
+
+.content em {
+    display: block;
+    margin-top: 20px;
 }
 
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="button">
-            <button class="about">About</button>
-            <button class="blog">Blog</button>
-            <button class="project">Projects</button>
-            <button class="contact">Contact</button>
-        </div>
-        <div class="text">
-            <h1>
-                Hoverable Sidenav Buttons
-            </h1>
-            <p>
-                Hover over the buttons in the left side navigation to open them.
-            </p>
-        </div>
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#home">Home page</a></li>
+                <li><a href="#musings">Musings</a></li>
+                <li><a href="#town">My town</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <h1>My first styled page</h1>
+            <p>Welcome to my styled page!</p>
+            <p>It lacks images, but at least it has style. And it has links, even if they don't go anywhere...</p>
+            <p>There should be more here, but I don't know what yet.</p>
+            <hr>
+            <p><em>Made 8 February 2005 by myself.</em></p>
+        </main>
     </div>
 </body>
 </html>
